@@ -1,3 +1,14 @@
-@function canadianize($word) {
-  
+@function unwrap($nullable, $default) {
+  @if $nullable != null {
+    @return $nullable;
+  } @else {
+    @return $default;
+  }
+}
+
+@function cad($word) {
+  $dict: (
+    "centre": "center"
+  );
+  @return unwrap(map-get($dict, $word), $word);
 }

@@ -1,95 +1,84 @@
+@import "./lib/func";
+
 /*****************
  * Justify Items *
  *****************/
-
-.ji-start {
-  justify-items: start;
+@mixin ji($place) {
+  .ji-#{$place} {
+    justify-items: cad($place);
+  }
 }
 
-.ji-centre {
-  justify-items: center;
-}
-
-.ji-end {
-  justify-items: end;
-}
+@include ji(start);
+@include ji(centre);
+@include ji(end);
 
 /*******************
  * Justify Content *
  *******************/
 
-.jc-start {
-  justify-content: start;
+@mixin jc($place) {
+  .jc-#{$place} {
+    justify-content: cad($place);
+  }
 }
 
-.jc-centre {
-  justify-content: center;
-}
-
-.jc-end {
-  justify-content: end;
-}
+@include jc(start);
+@include jc(centre);
+@include jc(end);
 
 /****************
  * Justify Self *
  ****************/
 
-.js-start {
-  justify-self: start;
+@mixin js($place) {
+  .js-#{$place} {
+    justify-self: cad($place);
+  }
 }
 
-.js-centre {
-  justify-self: center;
-}
-
-.js-end {
-  justify-self: end;
-}
+@include js(start);
+@include js(centre);
+@include js(end);
 
 /***************
  * Align Items *
  ***************/
 
-.ai-start {
-  align-items: start;
+@mixin ai($place) {
+  .ai-#{$place} {
+    align-items: cad($place);
+  }
 }
 
-.ai-centre {
-  align-items: center;
-}
-
-.ai-end {
-  align-items: end;
-}
+@include ai(start);
+@include ai(centre);
+@include ai(end);
 
 /*****************
  * Align Content *
  *****************/
 
-.ac-start {
-  align-content: start;
+@mixin ac($place) {
+  .ac-#{$place} {
+    align-content: cad($place);
+  }
 }
 
-.ac-centre {
-  align-content: center;
-}
-
-.ac-end {
-  align-content: end;
-}
+@include ac(start);
+@include ac(centre);
+@include ac(end);
 
 /**************
  * Align Self *
  **************/
 
-.as-start {
-  align-self: start;
+@mixin as($place) {
+  .as-#{$place} {
+    align-self: cad($place);
+  }
 }
 
-.as-centre {
-  align-self: center;
-}
-
-.as-end {
-  align-self: end;
-}
+@include as(start);
+@include as(centre);
+@include as(end);
