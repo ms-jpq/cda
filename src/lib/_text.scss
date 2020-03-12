@@ -1,6 +1,6 @@
-/********
- * Text *
- ********/
+/*************
+ * Transform *
+ *************/
 
 .text-capitalize {
   text-transform: capitalize;
@@ -15,16 +15,20 @@
   text-overflow: ellipsis;
 }
 
+/*********
+ * Align *
+ *********/
+
+.text-justify {
+  text-align: justify;
+}
+
 .text-left {
   text-align: left;
 }
 
 .text-centre {
   text-align: center;
-}
-
-.text-justify {
-  text-align: justify;
 }
 
 .text-right {

@@ -2,22 +2,50 @@
  * Percent *
  ***********/
 
-.w-100 {
-  width: 100%;
+@mixin w($len) {
+  .w-#{$len} {
+    width: $len * 1%;
+  }
 }
 
-.h-100 {
-  height: 100%;
+@include w(100);
+@include w(75);
+@include w(50);
+@include w(25);
+
+@mixin h($len) {
+  .h-#{$len} {
+    height: $len * 1%;
+  }
 }
+
+@include h(100);
+@include h(75);
+@include h(50);
+@include h(25);
 
 /*************
  * View Port *
  *************/
 
-.vw-100 {
-  width: 100vw;
+@mixin vw($len) {
+  .vw-#{$len} {
+    width: $len * 1vw;
+  }
 }
 
-.vh-100 {
-  width: 100vh;
+@include vw(100);
+@include vw(75);
+@include vw(50);
+@include vw(25);
+
+@mixin vh($len) {
+  .vh-#{$len} {
+    height: $len * 1vh;
+  }
 }
+
+@include vh(100);
+@include vh(75);
+@include vh(50);
+@include vh(25);
