@@ -5,3 +5,6 @@ out/
 tsc/
 dist/
 .vscode/
+*.css
+*.map
+.sass-cache

@@ -5,6 +5,9 @@
   },
   "description": "_",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "mkdir -p dist && scss src/entry.scss dist/entry.css",
+    "postinstall": "mkdir -p dist && ../.bin/scss src/entry.scss dist/entry.css"
+  },
   "version": "1.0.0"
 }

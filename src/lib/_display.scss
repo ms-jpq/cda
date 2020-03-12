@@ -18,17 +18,9 @@
   display: inline-block;
 }
 
-.d-grid {
-  display: grid;
-}
-
-.grid-row {
-  grid-auto-flow: row;
-}
-
-.grid-col {
-  grid-auto-flow: column;
-}
+/********
+ * Flex *
+ ********/
 
 .d-flex {
   display: flex;
@@ -40,4 +32,20 @@
 
 .flex-col {
   flex-direction: column;
+}
+
+/********
+ * Grid *
+ ********/
+
+.d-grid {
+  display: grid;
+}
+
+.grid-row {
+  grid-auto-flow: row;
+}
+
+.grid-col {
+  grid-auto-flow: column;
 }
