@@ -1,3 +1,11 @@
+/***********
+ * Display *
+ ***********/
+
+.hidden {
+  display: none !important;
+}
+
 /*********
  * Image *
  *********/
@@ -7,10 +15,10 @@
   height: auto;
 }
 
-/***********
- * Display *
- ***********/
+/**********
+ * Cursor *
+ **********/
 
-.hidden {
-  display: none !important;
+.clickable {
+  cursor: pointer;
 }
