@@ -1,10 +1,17 @@
 {
-  "author": "Fly Me to the Moon",
+  "author": "_",
   "dependencies": {
     "sass": "*"
   },
   "description": "_",
+  "homepage": "https://ms-jpq.github.io/cda",
   "license": "MIT",
+  "main": "_",
+  "name": "cda",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ms-jpq/cda.git"
+  },
   "scripts": {
     "build": "mkdir -p dist && scss src/entry.scss dist/entry.css",
     "postinstall": "mkdir -p dist && ../.bin/scss src/entry.scss dist/entry.css"
