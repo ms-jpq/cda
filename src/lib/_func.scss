@@ -8,7 +8,7 @@
 
 @function cad($word) {
   $dict: (
-    "centre": "center"
+    centre: center
   );
   @return unwrap(map-get($dict, $word), $word);
 }
