@@ -30,6 +30,22 @@
   justify-content: end;
 }
 
+/****************
+ * Justify Self *
+ ****************/
+
+.js-start {
+  justify-self: start;
+}
+
+.js-centre {
+  justify-self: center;
+}
+
+.js-end {
+  justify-self: end;
+}
+
 /***************
  * Align Items *
  ***************/
@@ -60,4 +76,20 @@
 
 .ac-end {
   align-content: end;
+}
+
+/**************
+ * Align Self *
+ **************/
+
+.as-start {
+  align-self: start;
+}
+
+.as-centre {
+  align-self: center;
+}
+
+.as-end {
+  align-self: end;
 }

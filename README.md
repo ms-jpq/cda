@@ -1,3 +1,3 @@
-# cda
+# ada
 
-SCSS - Domain Agnostic :: use with NPM dependency manager
+SASS - Domain Agnostic :: use with NPM dependency manager
