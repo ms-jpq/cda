@@ -1,0 +1,10 @@
+{
+  "author": "Fly Me to the Moon",
+  "dependencies": {
+    "sass": "*"
+  },
+  "description": "_",
+  "license": "MIT",
+  "scripts": {},
+  "version": "1.0.0"
+}

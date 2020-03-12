@@ -1,0 +1,16 @@
+/**********
+ * Border *
+ **********/
+
+ .border-thin {
+  border-style: solid;
+  border-width: thin;
+}
+
+.border-invis {
+  border-color: transparent;
+}
+
+.border-circle {
+  border-radius: 50%;
+}
