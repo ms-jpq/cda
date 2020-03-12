@@ -7,55 +7,87 @@
   margin-right: auto;
 }
 
-.m-0 {
-  margin: 0;
+@mixin m($len) {
+  .m-#{$len} {
+    margin: #{$len};
+  }
+
+  .my-#{$len} {
+    margin-top: #{$len};
+    margin-bottom: #{$len};
+  }
+
+  .mx-#{$len} {
+    margin-left: #{$len};
+    margin-right: #{$len};
+  }
+
+  .mt-#{$len} {
+    margin-top: #{$len};
+  }
+
+  .mb-#{$len} {
+    margin-bottom: #{$len};
+  }
+
+  .ml-#{$len} {
+    margin-left: #{$len};
+  }
+
+  .mr-#{$len} {
+    margin-right: #{$len};
+  }
 }
 
-.mt-0 {
-  margin-top: 0;
-}
-
-.mb-0 {
-  margin-bottom: 0;
-}
-
-.ml-0 {
-  margin-left: 0;
-}
-
-.mr-0 {
-  margin-right: 0;
-}
+@include m(0);
 
 /***********
  * Padding *
  ***********/
 
-.p-0 {
-  padding: 0;
+@mixin p($len) {
+  .p-#{$len} {
+    padding: #{$len};
+  }
+
+  .py-#{$len} {
+    padding-top: #{$len};
+    padding-bottom: #{$len};
+  }
+
+  .px-#{$len} {
+    padding-left: #{$len};
+    padding-right: #{$len};
+  }
+
+  .pt-#{$len} {
+    padding-top: #{$len};
+  }
+
+  .pb-#{$len} {
+    padding-bottom: #{$len};
+  }
+
+  .pl-#{$len} {
+    padding-left: #{$len};
+  }
+
+  .pr-#{$len} {
+    padding-right: #{$len};
+  }
 }
 
-.pt-0 {
-  padding-top: 0;
-}
-
-.pb-0 {
-  padding-bottom: 0;
-}
-
-.pl-0 {
-  padding-left: 0;
-}
-
-.pr-0 {
-  padding-right: 0;
-}
+@include p(0);
 
 /********
  * Both *
  ********/
 
-.mp-0 {
-  margin: 0;
-  padding: 0;
+@mixin mp($len) {
+  .mp-#{$len} {
+    margin: #{$len};
+    padding: #{$len};
+  }
 }
+
+@include mp(0);

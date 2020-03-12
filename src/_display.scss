@@ -1,30 +1,23 @@
+@mixin d($display) {
+  .d-#{$display} {
+    display: $display;
+  }
+}
+
 /***********
  * Display *
  ***********/
 
-.d-none {
-  display: none;
-}
-
-.d-inline {
-  display: inline;
-}
-
-.d-block {
-  display: block;
-}
-
-.d-ib {
-  display: inline-block;
-}
+@include d(none);
+@include d(inline);
+@include d(block);
+@include d(inline-block);
 
 /********
  * Flex *
  ********/
 
-.d-flex {
-  display: flex;
-}
+@include d(flex);
 
 .flex-row {
   flex-direction: row;
@@ -38,9 +31,7 @@
  * Grid *
  ********/
 
-.d-grid {
-  display: grid;
-}
+@include d(grid);
 
 .grid-row {
   grid-auto-flow: row;
