@@ -1,80 +1,58 @@
+@import "./lib/func";
+
+@mixin box_sizing($type, $len) {
+  .#{fst_char($type)}-#{$len} {
+    #{$type}: #{$len};
+  }
+
+  .#{fst_char($type)}y-#{$len} {
+    #{$type}-top: #{$len};
+    #{$type}-bottom: #{$len};
+  }
+
+  .#{fst_char($type)}x-#{$len} {
+    #{$type}-left: #{$len};
+    #{$type}-right: #{$len};
+  }
+
+  .#{fst_char($type)}t-#{$len} {
+    #{$type}-top: #{$len};
+  }
+
+  .#{fst_char($type)}b-#{$len} {
+    #{$type}-bottom: #{$len};
+  }
+
+  .#{fst_char($type)}l-#{$len} {
+    #{$type}-left: #{$len};
+  }
+
+  .#{fst_char($type)}r-#{$len} {
+    #{$type}-right: #{$len};
+  }
+}
+
 /**********
  * Margin *
  **********/
+
+@mixin m($len) {
+  @include box_sizing(margin, $len);
+}
+
+@include m(0);
 
 .m-auto {
   margin-left: auto;
   margin-right: auto;
 }
 
-@mixin m($len) {
-  .m-#{$len} {
-    margin: #{$len};
-  }
-
-  .my-#{$len} {
-    margin-top: #{$len};
-    margin-bottom: #{$len};
-  }
-
-  .mx-#{$len} {
-    margin-left: #{$len};
-    margin-right: #{$len};
-  }
-
-  .mt-#{$len} {
-    margin-top: #{$len};
-  }
-
-  .mb-#{$len} {
-    margin-bottom: #{$len};
-  }
-
-  .ml-#{$len} {
-    margin-left: #{$len};
-  }
-
-  .mr-#{$len} {
-    margin-right: #{$len};
-  }
-}
-
-@include m(0);
-
 /***********
  * Padding *
  ***********/
 
 @mixin p($len) {
-  .p-#{$len} {
-    padding: #{$len};
-  }
-
-  .py-#{$len} {
-    padding-top: #{$len};
-    padding-bottom: #{$len};
-  }
-
-  .px-#{$len} {
-    padding-left: #{$len};
-    padding-right: #{$len};
-  }
-
-  .pt-#{$len} {
-    padding-top: #{$len};
-  }
-
-  .pb-#{$len} {
-    padding-bottom: #{$len};
-  }
-
-  .pl-#{$len} {
-    padding-left: #{$len};
-  }
-
-  .pr-#{$len} {
-    padding-right: #{$len};
-  }
+  @include box_sizing(padding, $len);
 }
 
 @include p(0);
