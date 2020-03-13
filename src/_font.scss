@@ -1,0 +1,10 @@
+/**********
+ * Weight *
+ **********/
+
+@for $weight from 1 through 9 {
+  $val: $weight * 100;
+  .font-w#{$val} {
+    font-weight: $val;
+  }
+}

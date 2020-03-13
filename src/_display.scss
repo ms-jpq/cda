@@ -1,17 +1,17 @@
+/***********
+ * Display *
+ ***********/
 @mixin d($display) {
   .d-#{$display} {
     display: $display;
   }
 }
 
-/***********
- * Display *
- ***********/
+$display_params: none, inline, block, inline-block, table, flex, grid;
 
-@include d(none);
-@include d(inline);
-@include d(block);
-@include d(inline-block);
+@each $display in $display_params {
+  @include d($display);
+}
 
 /********
  * Flex *
@@ -30,8 +30,6 @@
 /********
  * Grid *
  ********/
-
-@include d(grid);
 
 .grid-row {
   grid-auto-flow: row;
