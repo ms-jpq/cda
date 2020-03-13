@@ -1,3 +1,5 @@
+@import "./lib/func";
+
 /*************
  * Transform *
  *************/
@@ -14,12 +16,12 @@ $transform_params: none, capitalize, uppercase, lowercase, full-width;
  * Align *
  *********/
 
-$align_params: left, right, center, justify, justify-all, start, end,
+$align_params: left, right, centre, justify, justify-all, start, end,
   match-parent;
 
 @each $align in $align_params {
   .text-#{$align} {
-    text-align: $align;
+    text-align: cad($align);
   }
 }
 
