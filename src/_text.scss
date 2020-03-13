@@ -6,12 +6,17 @@
   text-transform: capitalize;
 }
 
+.text-lowercase {
+  text-transform: lowercase;
+}
+
 .text-uppercase {
   text-transform: uppercase;
 }
 
 .text-ellipsis {
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
@@ -33,4 +38,16 @@
 
 .text-right {
   text-align: right;
+}
+
+/********
+ * Wrap *
+ ********/
+
+.text-wrap {
+  white-space: normal;
+}
+
+.text-nowrap {
+  white-space: nowrap;
 }

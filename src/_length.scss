@@ -1,3 +1,15 @@
+/********
+ * Auto *
+ ********/
+
+.w-auto {
+  width: auto;
+}
+
+.h-auto {
+  height: auto;
+}
+
 /***********
  * Percent *
  ***********/
@@ -23,6 +35,32 @@
 @include h(75);
 @include h(50);
 @include h(25);
+
+/***************
+ * Max Percent *
+ ***************/
+
+@mixin mw($len) {
+  .mw-#{$len} {
+    max-width: $len * 1%;
+  }
+}
+
+@include mw(100);
+@include mw(75);
+@include mw(50);
+@include mw(25);
+
+@mixin mh($len) {
+  .mh-#{$len} {
+    max-height: $len * 1%;
+  }
+}
+
+@include mh(100);
+@include mh(75);
+@include mh(50);
+@include mh(25);
 
 /*************
  * View Port *

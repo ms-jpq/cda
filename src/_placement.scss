@@ -82,3 +82,17 @@
 @include as(start);
 @include as(centre);
 @include as(end);
+
+/*********
+ * Float *
+ *********/
+
+@mixin flo($at) {
+  .float-#{$at} {
+    float: $at;
+  }
+}
+
+@include flo(none);
+@include flo(left);
+@include flo(right);
