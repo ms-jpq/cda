@@ -2,47 +2,36 @@
  * Transform *
  *************/
 
-.text-capitalize {
-  text-transform: capitalize;
-}
+$transform_params: none, capitalize, uppercase, lowercase, full-width;
 
-.text-lowercase {
-  text-transform: lowercase;
-}
-
-.text-uppercase {
-  text-transform: uppercase;
-}
-
-.text-ellipsis {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+@each $trans in $transform_params {
+  .text-#{$trans} {
+    text-transform: $trans;
+  }
 }
 
 /*********
  * Align *
  *********/
 
-.text-justify {
-  text-align: justify;
-}
+$align_params: left, right, center, justify, justify-all, start, end,
+  match-parent;
 
-.text-left {
-  text-align: left;
-}
-
-.text-centre {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
+@each $align in $align_params {
+  .text-#{$align} {
+    text-align: $align;
+  }
 }
 
 /********
  * Wrap *
  ********/
+
+.text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 
 .text-wrap {
   white-space: normal;
