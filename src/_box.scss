@@ -1,46 +1,46 @@
 @import "./lib/func";
 
-@mixin box_sizing($type, $len) {
+@mixin box_sizing($type, $size, $len) {
   .#{fst_char($type)}-#{$len} {
-    #{$type}: #{$len};
+    #{$type}: $len * $size;
   }
 
   .#{fst_char($type)}y-#{$len} {
     #{$type}-top: #{$len};
-    #{$type}-bottom: #{$len};
+    #{$type}-bottom: $len * $size;
   }
 
   .#{fst_char($type)}x-#{$len} {
     #{$type}-left: #{$len};
-    #{$type}-right: #{$len};
+    #{$type}-right: $len * $size;
   }
 
   .#{fst_char($type)}t-#{$len} {
-    #{$type}-top: #{$len};
+    #{$type}-top: $len * $size;
   }
 
   .#{fst_char($type)}b-#{$len} {
-    #{$type}-bottom: #{$len};
+    #{$type}-bottom: $len * $size;
   }
 
   .#{fst_char($type)}l-#{$len} {
-    #{$type}-left: #{$len};
+    #{$type}-left: $len * $size;
   }
 
   .#{fst_char($type)}r-#{$len} {
-    #{$type}-right: #{$len};
+    #{$type}-right: $len * $size;
   }
 }
+
+$base_size: 1em / 2;
 
 /**********
  * Margin *
  **********/
 
-@mixin m($len) {
-  @include box_sizing(margin, $len);
+@for $len from 0 through 5 {
+  @include box_sizing(margin, $base_size, $len);
 }
-
-@include m(0);
 
 .mx-auto {
   margin-left: auto;
@@ -51,11 +51,9 @@
  * Padding *
  ***********/
 
-@mixin p($len) {
-  @include box_sizing(padding, $len);
+@for $len from 0 through 5 {
+  @include box_sizing(padding, $base_size, $len);
 }
-
-@include p(0);
 
 /********
  * Both *
