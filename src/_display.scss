@@ -14,6 +14,18 @@ $display_params: none, inline, block, inline-block, table, flex, grid;
 }
 
 /********
+ * Grid *
+ ********/
+
+.grid-row {
+  grid-auto-flow: row;
+}
+
+.grid-col {
+  grid-auto-flow: column;
+}
+
+/********
  * Flex *
  ********/
 
@@ -27,14 +39,11 @@ $display_params: none, inline, block, inline-block, table, flex, grid;
   flex-direction: column;
 }
 
-/********
- * Grid *
- ********/
-
-.grid-row {
-  grid-auto-flow: row;
-}
-
-.grid-col {
-  grid-auto-flow: column;
+@for $i from 0 through 5 {
+  .flex-shrink-#{$i} {
+    flex-shrink: $i;
+  }
+  .flex-grow-#{$i} {
+    flex-grow: $i;
+  }
 }
