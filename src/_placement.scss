@@ -1,87 +1,68 @@
 @import "./lib/func";
 
+$item_params: stretch, start, centre, end;
+$content_params: stretch, start, centre, end, baseline, space-between,
+  space-around, space-evenly;
+
 /*****************
  * Justify Items *
  *****************/
-@mixin ji($place) {
+
+@each $place in $item_params {
   .ji-#{$place} {
     justify-items: cad($place);
   }
 }
 
-@include ji(start);
-@include ji(centre);
-@include ji(end);
-
-/*******************
- * Justify Content *
- *******************/
-
-@mixin jc($place) {
-  .jc-#{$place} {
-    justify-content: cad($place);
-  }
-}
-
-@include jc(start);
-@include jc(centre);
-@include jc(end);
-
 /****************
  * Justify Self *
  ****************/
 
-@mixin js($place) {
+@each $place in $item_params {
   .js-#{$place} {
     justify-self: cad($place);
   }
 }
 
-@include js(start);
-@include js(centre);
-@include js(end);
-
 /***************
  * Align Items *
  ***************/
 
-@mixin ai($place) {
+@each $place in $item_params {
   .ai-#{$place} {
     align-items: cad($place);
   }
 }
 
-@include ai(start);
-@include ai(centre);
-@include ai(end);
-
-/*****************
- * Align Content *
- *****************/
-
-@mixin ac($place) {
-  .ac-#{$place} {
-    align-content: cad($place);
-  }
-}
-
-@include ac(start);
-@include ac(centre);
-@include ac(end);
-
 /**************
  * Align Self *
  **************/
 
-@mixin as($place) {
+@each $place in $item_params {
   .as-#{$place} {
     align-self: cad($place);
   }
 }
 
-@include as(start);
-@include as(centre);
-@include as(end);
+/*******************
+ * Justify Content *
+ *******************/
+
+@each $place in $content_params {
+  .jc-#{$place} {
+    justify-content: cad($place);
+  }
+}
+
+/*****************
+ * Align Content *
+ *****************/
+
+@each $place in $content_params {
+  .ac-#{$place} {
+    align-content: cad($place);
+  }
+}
 
 /*********
  * Float *
