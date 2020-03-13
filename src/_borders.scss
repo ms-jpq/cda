@@ -8,6 +8,18 @@ $style_params: none, hidden, dotted, dashed, solid, double, groove, ridge, inset
   .border-#{$style} {
     border-style: $style;
   }
+  .border-top-#{$style} {
+    border-top-style: $style;
+  }
+  .border-bottom-#{$style} {
+    border-bottom-style: $style;
+  }
+  .border-left-#{$style} {
+    border-left-style: $style;
+  }
+  .border-right-#{$style} {
+    border-right-style: $style;
+  }
 }
 
 /*********
@@ -18,6 +30,18 @@ $width_params: thin, medium, thick;
 @each $width in $width_params {
   .border-#{$width} {
     border-width: $width;
+  }
+  .border-top-#{$width} {
+    border-top-width: $width;
+  }
+  .border-#{$width} {
+    border-bottom-width: $width;
+  }
+  .border-left-#{$width} {
+    border-left-width: $width;
+  }
+  .border-right-#{$width} {
+    border-right-width: $width;
   }
 }
 
