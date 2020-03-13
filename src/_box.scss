@@ -2,33 +2,33 @@
 
 @mixin box_sizing($type, $len) {
   .#{fst_char($type)}-#{$len} {
-    #{$type}: #{$len} !important;
+    #{$type}: #{$len};
   }
 
   .#{fst_char($type)}y-#{$len} {
-    #{$type}-top: #{$len} !important;
-    #{$type}-bottom: #{$len} !important;
+    #{$type}-top: #{$len};
+    #{$type}-bottom: #{$len};
   }
 
   .#{fst_char($type)}x-#{$len} {
-    #{$type}-left: #{$len} !important;
-    #{$type}-right: #{$len} !important;
+    #{$type}-left: #{$len};
+    #{$type}-right: #{$len};
   }
 
   .#{fst_char($type)}t-#{$len} {
-    #{$type}-top: #{$len} !important;
+    #{$type}-top: #{$len};
   }
 
   .#{fst_char($type)}b-#{$len} {
-    #{$type}-bottom: #{$len} !important;
+    #{$type}-bottom: #{$len};
   }
 
   .#{fst_char($type)}l-#{$len} {
-    #{$type}-left: #{$len} !important;
+    #{$type}-left: #{$len};
   }
 
   .#{fst_char($type)}r-#{$len} {
-    #{$type}-right: #{$len} !important;
+    #{$type}-right: #{$len};
   }
 }
 
@@ -42,9 +42,9 @@
 
 @include m(0);
 
-.mx-auto {
-  margin-left: auto !important;
-  margin-right: auto !important;
+.m-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /***********
@@ -63,8 +63,8 @@
 
 @mixin mp($len) {
   .mp-#{$len} {
-    margin: #{$len} !important;
-    padding: #{$len} !important;
+    margin: #{$len};
+    padding: #{$len};
   }
 }
 
