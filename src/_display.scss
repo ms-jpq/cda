@@ -1,3 +1,5 @@
+@import "./lib/vars";
+
 /***********
  * Display *
  ***********/
@@ -23,6 +25,18 @@ $display_params: none, inline, block, inline-block, table, flex, grid;
 
 .grid-col {
   grid-auto-flow: column;
+}
+
+@for $len from 0 through $len_increments {
+  .row-gap-#{$len} {
+    row-gap: $len * $base_len;
+  }
+}
+
+@for $len from 0 through $len_increments {
+  .col-gap-#{$len} {
+    column-gap: $len * $base_len;
+  }
 }
 
 /********

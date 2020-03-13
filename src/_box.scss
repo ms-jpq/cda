@@ -1,4 +1,5 @@
 @import "./lib/func";
+@import "./lib/vars";
 
 @mixin box_sizing($type, $size, $len) {
   .#{fst_char($type)}-#{$len} {
@@ -32,15 +33,12 @@
   }
 }
 
-$base_size: 1rem / 2;
-$size_increments: 6;
-
 /**********
  * Margin *
  **********/
 
-@for $len from 0 through $size_increments {
-  @include box_sizing(margin, $base_size, $len);
+@for $len from 0 through $len_increments {
+  @include box_sizing(margin, $base_len, $len);
 }
 
 .mx-auto {
@@ -52,8 +50,8 @@ $size_increments: 6;
  * Padding *
  ***********/
 
-@for $len from 0 through $size_increments {
-  @include box_sizing(padding, $base_size, $len);
+@for $len from 0 through $len_increments {
+  @include box_sizing(padding, $base_len, $len);
 }
 
 /********
