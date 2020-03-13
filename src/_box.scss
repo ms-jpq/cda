@@ -6,12 +6,12 @@
   }
 
   .#{fst_char($type)}y-#{$len} {
-    #{$type}-top: #{$len};
+    #{$type}-top: $len * $size;
     #{$type}-bottom: $len * $size;
   }
 
   .#{fst_char($type)}x-#{$len} {
-    #{$type}-left: #{$len};
+    #{$type}-left: $len * $size;
     #{$type}-right: $len * $size;
   }
 
@@ -32,13 +32,14 @@
   }
 }
 
-$base_size: 1em / 2;
+$base_size: 1rem / 2;
+$size_increments: 6;
 
 /**********
  * Margin *
  **********/
 
-@for $len from 0 through 5 {
+@for $len from 0 through $size_increments {
   @include box_sizing(margin, $base_size, $len);
 }
 
@@ -51,7 +52,7 @@ $base_size: 1em / 2;
  * Padding *
  ***********/
 
-@for $len from 0 through 5 {
+@for $len from 0 through $size_increments {
   @include box_sizing(padding, $base_size, $len);
 }
 
