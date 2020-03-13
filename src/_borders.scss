@@ -1,11 +1,29 @@
-/**********
- * Border *
- **********/
+/*********
+ * Style *
+ *********/
+$style_params: none, hidden, dotted, dashed, solid, double, groove, ridge, inset,
+  outset;
 
-.border-thin {
-  border-style: solid;
-  border-width: thin;
+@each $style in $style_params {
+  .border-#{$style} {
+    border-style: $style;
+  }
 }
+
+/*********
+ * Width *
+ *********/
+$width_params: thin, medium, thick;
+
+@each $width in $width_params {
+  .border-#{$width} {
+    border-width: $width;
+  }
+}
+
+/********
+ * Misc *
+ ********/
 
 .border-invis {
   border-color: transparent;
