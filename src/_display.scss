@@ -53,6 +53,13 @@ $display_params: none, inline, block, inline-block, table, flex, grid;
   flex-direction: column;
 }
 
+$wrap_params: nowrap, wrap, wrap-reverse;
+@each $wrap in $wrap_params {
+  .flex-#{$wrap} {
+    flex-wrap: $wrap;
+  }
+}
+
 @for $i from 0 through 5 {
   .flex-shrink-#{$i} {
     flex-shrink: $i;
