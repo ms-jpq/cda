@@ -34,10 +34,18 @@ $align_params: left, right, centre, justify, justify-all, start, end,
   text-overflow: ellipsis;
 }
 
-.text-wrap {
-  white-space: normal;
+/**************
+ * Whitespace *
+ **************/
+
+$whitespace_params: normal, nowrap, pre, pre-wrap, pre-line, break-spaces;
+
+@mixin white_space($param) {
+  .white-space-#{$param} {
+    white-space: $param;
+  }
 }
 
-.text-nowrap {
-  white-space: nowrap;
+@each $p in $whitespace_params {
+  @include white_space($p);
 }
