@@ -14,7 +14,9 @@
   },
   "scripts": {
     "build": "mkdir -p dist && sass src/entry.scss dist/entry.css",
-    "postinstall": "mkdir -p dist && ../.bin/sass src/entry.scss dist/entry.css"
+    "postinstall": "mkdir -p dist && npm run sass -- src/entry.scss dist/entry.css",
+    "sass": "sass"
   },
   "version": "1.0.0"
 }
+
