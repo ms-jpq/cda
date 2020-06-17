@@ -13,8 +13,8 @@
     "url": "git+https://github.com/ms-jpq/cda.git"
   },
   "scripts": {
-    "build": "mkdir -p dist && sass src/entry.scss dist/entry.css",
-    "postinstall": "mkdir -p dist && npm run sass -- src/entry.scss dist/entry.css",
+    "build": "mkdir -p dist && npm run sass src/entry.scss dist/entry.css",
+    "postinstall": "npm run build",
     "sass": "sass"
   },
   "version": "1.0.0"
