@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "./build.js",
-    "postinstall": "npm run build"
+    "prepare": "npm run build"
   },
   "version": "1.0.0"
 }
