@@ -1,2 +1,4 @@
-$base_len: 1rem / 4;
+@use "sass:math";
+
+$base_len: math.div(1rem, 4);
 $len_increments: 12;

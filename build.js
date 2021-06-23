@@ -2,11 +2,10 @@
 
 const { spawnSync } = require("child_process");
 
-process.chdir(__dirname);
-
 const proc = spawnSync("sass", ["src/entry.scss", "dist/entry.css"], {
-  stdio: "inherit"
+  stdio: "inherit",
+  cwd: __dirname,
 });
 
-process.exit(proc.status || undefined)
+process.exit(proc.status || undefined);
 
