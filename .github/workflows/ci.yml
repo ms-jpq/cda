@@ -1,6 +1,4 @@
-
 ---
-
 name: CI
 
 on:
@@ -10,12 +8,11 @@ on:
     - cron: "0 0 * * *" # daily
 
 jobs:
-
   release:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Install Node.js
+      - name: Setup Node
         uses: actions/setup-node@v2
 
       - name: Checkout
