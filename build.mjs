@@ -1,15 +1,21 @@
 #!/usr/bin/env node
+import { spawnSync } from "node:child_process";
+import { dirname } from "node:path";
+import { fileURLToPath } from "node:url";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { spawnSync } from "child_process";
+const cwd = dirname(fileURLToPath(new URL(import.meta.url)));
 
-const top_lv = dirname(fileURLToPath(import.meta.url));
+const { error, status } = spawnSync(
+  "sass",
+  ["src/entry.scss", "dist/entry.css"],
+  {
+    stdio: "inherit",
+    cwd,
+  }
+);
 
-const proc = spawnSync("sass", ["src/entry.scss", "dist/entry.css"], {
-  stdio: "inherit",
-  cwd: top_lv,
-});
+if (error) {
+  throw error;
+}
 
-process.exitCode = proc.status;
-
+process.exitCode = status ?? 1;
