@@ -12,7 +12,7 @@
     "url": "git+https://github.com/ms-jpq/cda.git"
   },
   "scripts": {
-    "build": "./build.mjs",
+    "build": "node ./build.mjs",
     "postinstall": "npm run build"
   },
   "type": "module",
