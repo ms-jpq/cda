@@ -15,5 +15,6 @@
     "build": "./build.mjs",
     "postinstall": "npm run build"
   },
+  "type": "module",
   "version": "1.0.0"
 }
